@@ -58,3 +58,31 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+
+
+
+# InfinityScroll
+Program/Unity_InfinityScroll/Library/
+Program/Unity_InfinityScroll/Temp/
+Program/Unity_InfinityScroll/obj/
+Program/Unity_InfinityScroll/Logs/
+Program/Unity_InfinityScroll/ExportedObj/
+Program/Unity_InfinityScroll/.consulo/
+Program/Unity_InfinityScroll/*.csproj
+Program/Unity_InfinityScroll/*.unityproj
+Program/Unity_InfinityScroll/*.sln
+Program/Unity_InfinityScroll/*.suo
+Program/Unity_InfinityScroll/*.tmp
+Program/Unity_InfinityScroll/*.user
+Program/Unity_InfinityScroll/*.userprefs
+Program/Unity_InfinityScroll/*.pidb
+Program/Unity_InfinityScroll/*.booproj
+Program/Unity_InfinityScroll/*.svd
+Program/Unity_InfinityScroll/*.pdb
+Program/Unity_InfinityScroll/*.mdb
+Program/Unity_InfinityScroll/*.opendb
+Program/Unity_InfinityScroll/*.VC.db
+Program/Unity_InfinityScroll/*.vsconfig
+
+
+
