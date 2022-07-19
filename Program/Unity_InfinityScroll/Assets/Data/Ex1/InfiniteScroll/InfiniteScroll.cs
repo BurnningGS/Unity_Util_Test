@@ -77,40 +77,40 @@ namespace Ex1
 
         protected override void Start()
         {
-            var controllers = GetComponents<MonoBehaviour>()
-                    .Where(item => item is IInfiniteScrollSetup)
-                    .Select(item => item as IInfiniteScrollSetup)
-                    .ToList();
+            //-----------------------------------------------------------------------------------------------
+            // 1. Find Controllers (콘트롤러 검색)
+            //
+            var controllers = GetComponents<MonoBehaviour>().Where(item => item is IInfiniteScrollSetup).Select(item => item as IInfiniteScrollSetup).ToList();
 
-            // create items
+            //-----------------------------------------------------------------------------------------------
+            // 2. Create items (아이템 생성)
+            //
 
             var scrollRect = GetComponentInParent<ScrollRect>();
-            scrollRect.horizontal = direction == ScrollDirection.Horizontal;
-            scrollRect.vertical = direction == ScrollDirection.Vertical;
+            scrollRect.horizontal = (direction == ScrollDirection.Horizontal);
+            scrollRect.vertical = (direction == ScrollDirection.Vertical);
             scrollRect.content = rectTransform;
 
-            itemPrototype.gameObject.SetActive(false);
+            itemPrototype.gameObject.SetActive(false); // 생성 아이템 원본 꺼줌.
 
+            // 아이템 생성.
             for (int i = 0; i < instantateItemCount; i++)
             {
-                var item = GameObject.Instantiate(itemPrototype) as RectTransform;
-                item.SetParent(transform, false);
-                item.name = i.ToString();
-                item.anchoredPosition = direction == ScrollDirection.Vertical ? new Vector2(0, -itemScale * i) : new Vector2(itemScale * i, 0);
-                itemList.AddLast(item);
+                var item = Instantiate(itemPrototype) as RectTransform;
+                item.SetParent(transform, false); // 부모설정
+                item.name = i.ToString(); // 이름 설정
+                item.anchoredPosition = (direction == ScrollDirection.Vertical) ? new Vector2(0, -itemScale * i) : new Vector2(itemScale * i, 0);
+                itemList.AddLast(item);// 리스트 끝에 추가.
 
-                item.gameObject.SetActive(true);
+                item.gameObject.SetActive(true);// 생성한 아이템 켜줌
 
                 foreach (var controller in controllers)
-                {
                     controller.OnUpdateItem(i, item.gameObject);
-                }
             }
 
             foreach (var controller in controllers)
-            {
                 controller.OnPostSetupItems();
-            }
+            
         }
 
         void Update()
