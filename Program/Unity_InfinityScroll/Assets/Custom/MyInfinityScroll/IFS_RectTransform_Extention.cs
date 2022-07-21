@@ -7,31 +7,7 @@ using UnityEngine.UI;
 namespace TD
 
 {
-    public enum eAnchorOrPivotType
-    {
-        TopLeft,
-        TopCenter,
-        TopRight,
-
-        MiddleLeft,
-        MiddleCenter,
-        MiddleRight,
-
-        BottomLeft,
-        BottonCenter,
-        BottomRight,
-        BottomStretch,
-
-        VertStretchLeft,
-        VertStretchRight,
-        VertStretchCenter,
-
-        HorStretchTop,
-        HorStretchMiddle,
-        HorStretchBottom,
-
-        StretchAll
-    }
+    
 
 
     public static class RectTransform_Extention

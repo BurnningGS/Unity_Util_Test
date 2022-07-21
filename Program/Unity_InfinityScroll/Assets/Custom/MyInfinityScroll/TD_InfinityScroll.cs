@@ -14,26 +14,7 @@ namespace TD
     [Serializable]
     public class TD_InfinityScroll : UIBehaviour
     {
-        public enum eInfinityScrollControllerType
-        {
-            Infinite,
-            Limited,
-            Max
-        }
-        public enum eInfinityScrollDirection
-        {
-            Vertical,
-            Horizontal,
-            Max
-        }
-
-        public enum eStartCorner
-        {
-
-        }
-        public enum eChildAlignment
-        { 
-        }
+        
         //============================================================================================
         // Inner Class
 

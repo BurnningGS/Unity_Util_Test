@@ -17,11 +17,11 @@ namespace TD
 
             _myScroll.Data.onUpdateItemEvents.AddListener(OnUpdateItem);
 
-            if (_myScroll.CreateData.InfiniteScrollType == TD_InfinityScroll.eInfinityScrollControllerType.Infinite)
+            if (_myScroll.CreateData.InfiniteScrollType == eInfinityScrollControllerType.Infinite)
             { 
                 _myScroll.CreateData.TargetScrollRect.movementType = ScrollRect.MovementType.Unrestricted;
             }
-            else if (_myScroll.CreateData.InfiniteScrollType == TD_InfinityScroll.eInfinityScrollControllerType.Limited)
+            else if (_myScroll.CreateData.InfiniteScrollType == eInfinityScrollControllerType.Limited)
             {
                 GetComponentInParent<ScrollRect>().movementType = ScrollRect.MovementType.Elastic;
                 var rt = GetComponent<RectTransform>();
@@ -36,7 +36,7 @@ namespace TD
             if (_myScroll == null)
                 _myScroll = GetComponent<TD_InfinityScroll>();
 
-            if (_myScroll.CreateData.InfiniteScrollType == TD_InfinityScroll.eInfinityScrollControllerType.Limited)
+            if (_myScroll.CreateData.InfiniteScrollType == eInfinityScrollControllerType.Limited)
             {
 
                 if (itemCount < 0 || itemCount >= _myScroll.CreateData.LimitTypeMaxItemCount)
