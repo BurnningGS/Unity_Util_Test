@@ -2496,7 +2496,6 @@ GameObject:
   - component: {fileID: 486460794}
   - component: {fileID: 486460793}
   - component: {fileID: 486460792}
-  - component: {fileID: 486460791}
   - component: {fileID: 486460796}
   m_Layer: 0
   m_Name: EventSystem
@@ -2505,19 +2504,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &486460791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 486460790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d49b7c1bcd2e07499844da127be038d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ForceModuleActive: 0
 --- !u!114 &486460792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4911,15 +4897,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6a2b01b25f516846b4dda1e65a34c0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1441318855890940, guid: 3dfb2ceaaea23f44aac5850b901801bc, type: 3}
-  scrollRect: {fileID: 855534290}
-  content: {fileID: 1775021268}
+  ChildItem: {fileID: 1441318855890940, guid: 3dfb2ceaaea23f44aac5850b901801bc, type: 3}
+  targetScrollRect: {fileID: 855534290}
+  targetContentBox: {fileID: 1775021268}
   type: 0
-  verticalType: 1
+  verticalType: 0
   horizontalType: 0
   overrideX: 0
   overrideY: 0
-  extraContentLength: 0
+  extraContentLength: 1000
   showCellNumber: {x: 3, y: 4}
   cellSize: {x: 100, y: 100}
   itemGenerate: 18
@@ -8712,7 +8698,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1561030089
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10083,9 +10069,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6a2b01b25f516846b4dda1e65a34c0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1441318855890940, guid: 3dfb2ceaaea23f44aac5850b901801bc, type: 3}
-  scrollRect: {fileID: 1951631012}
-  content: {fileID: 57339433}
+  ChildItem: {fileID: 0}
+  targetScrollRect: {fileID: 0}
+  targetContentBox: {fileID: 0}
   type: 0
   verticalType: 0
   horizontalType: 0
