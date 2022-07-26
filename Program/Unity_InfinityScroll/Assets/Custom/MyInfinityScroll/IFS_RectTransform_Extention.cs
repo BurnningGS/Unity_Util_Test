@@ -7,9 +7,6 @@ using UnityEngine.UI;
 namespace TD
 
 {
-    
-
-
     public static class RectTransform_Extention
     {
         /// <summary>
@@ -181,5 +178,42 @@ namespace TD
             }
         }
 
+
+        /// <summary>
+        ///  부모 오브젝트의 크기에 맞게 이미지를 확장 또는 축소 해 줍니다.
+        /// </summary>
+        /// <param name="target">Target 이 되는 이미지 입니다.</param>
+        /// <param name="parentRt">부모 오브젝트의 RectTransform 입니다.</param>
+        public static void SetImageAutoSizeParentSize(ref Image target, ref RectTransform parentRt)
+        {
+            target.SetNativeSize();
+            Vector2 sizeOri = target.gameObject.GetComponent<RectTransform>().sizeDelta;
+            Vector2 dstSize = parentRt.sizeDelta;
+
+            if (sizeOri != dstSize)
+            {
+                float rate;
+
+                if (sizeOri.x >= sizeOri.y)
+                    rate = parentRt.sizeDelta.x / sizeOri.x;
+                else
+                    rate = parentRt.sizeDelta.y / sizeOri.y;
+
+                target.rectTransform.sizeDelta = target.rectTransform.sizeDelta * rate;
+            }
+            else
+                target.rectTransform.sizeDelta = dstSize;
+        }
+
     }
+
+
+
+    public static class UtilTest
+    {
+
+
+        
+    }
+
 }
