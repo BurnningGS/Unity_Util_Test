@@ -350,7 +350,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1040369292}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -620,7 +620,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 320, y: 240}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -664,6 +664,7 @@ RectTransform:
   - {fileID: 1344159166}
   - {fileID: 1106588388}
   - {fileID: 1040369293}
+  - {fileID: 1573270941}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -672,6 +673,115 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1573270940
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1573270941}
+  - component: {fileID: 1573270943}
+  - component: {fileID: 1573270944}
+  - component: {fileID: 1573270945}
+  m_Layer: 5
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1573270941
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573270940}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1354133009}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 500, y: 500}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1573270943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573270940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6caa4a82ccd8164fa114858df758899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EditorUpdateMode: 0
+  ScrollType: 2
+  StandardAxis: 2
+  StartCorner: 9
+  ChildAligent: 9
+  CellSize: {x: 1, y: 1}
+  Spacing: {x: 0, y: 0}
+  Padding: {x: 0, y: 0, z: 0, w: 0}
+  ST_ItemCount: {x: 0, y: 0}
+  ExtraItemCount: {x: 1, y: 1}
+  CurrentIndex: 0
+  MaxItemCount: 0
+  TotalItemCount: 0
+  Target_BG: {fileID: 0}
+  Target_ScrollRectRt: {fileID: 0}
+  Target_ScrollRect: {fileID: 0}
+  Content: {fileID: 0}
+  onUpdateItemEvents:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!222 &1573270944
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573270940}
+  m_CullTransparentMesh: 1
+--- !u!114 &1573270945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573270940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &1928992323
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,25 +833,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61355d60dd573c348b49edcbe1cd77f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScrollType: 2
-  StandardAxis: 2
-  StartCorner: 9
-  ChildAligent: 9
-  CellSize: {x: 1, y: 1}
-  Spacing: {x: 0, y: 0}
-  Padding: {x: 0, y: 0, z: 0, w: 0}
-  ST_ItemCount: {x: 0, y: 0}
-  ExtraItemCount: {x: 1, y: 1}
-  CurrentIndex: 0
-  MaxItemCount: 0
-  TotalItemCount: 0
-  Target_BG: {fileID: 0}
-  Target_ScrollRectRt: {fileID: 0}
-  Target_ScrollRect: {fileID: 0}
-  Content: {fileID: 0}
-  onUpdateItemEvents:
-    m_PersistentCalls:
-      m_Calls: []
   CreateData:
     ItemController: {fileID: 0}
     CreateItemPrefab: {fileID: 0}

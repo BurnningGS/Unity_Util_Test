@@ -33,14 +33,20 @@ namespace TD
         public void DrawButton()
         {
             GUILayout.Label("=======================================");
-            GUILayout.Label(" [ Infinity Scroll Create 및 Setting ] ");
-            GUILayout.Space(20);
+            GUILayout.Label(" [ Infinity Scroll Create & Setting ] ");
 
-            if (GUILayout.Button(" Create ( 생성 ) ")) 
-                _target.OnClick_CreateInfinityScroll();
             GUILayout.Space(20);
-            if (GUILayout.Button(" Reset ( 초기화 ) ")) 
-                _target.OnClick_ResetInfinityScroll();
+            if (GUILayout.Button(" 1) Reset ( 초기화 ) ")) 
+                _target.Editor_ResetInfinityScroll();
+
+            GUILayout.Space(20);
+            if (GUILayout.Button(" 2) Create ( 생성 ) "))
+                _target.Editor_CreateInfinityScroll();
+
+            GUILayout.Space(20);
+            if (GUILayout.Button(" 3) Set ( 셋팅 ) "))
+                _target.Editor_SetInfinityScroll();
+
         }
 
 
