@@ -10,11 +10,9 @@ using UnityEngine.EventSystems;
 
 namespace TD
 {
-
     [Serializable]
     public class TD_InfinityScroll : UIBehaviour
     {
-        
         //============================================================================================
         // Inner Class
 

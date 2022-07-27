@@ -8,15 +8,15 @@ namespace TD
 {
 #if UNITY_EDITOR
 
-    [CustomEditor(typeof(TD_InfinityScroll))]
+    [CustomEditor(typeof(TD_InfinityScroll_Test))]
     [ExecuteInEditMode]
     public class TD_CE_InfinityScroll : Editor
     {
-        private TD_InfinityScroll _target;
+        private TD_InfinityScroll_Test _target;
 
         private void OnEnable()
         {
-            _target = (TD_InfinityScroll)target;
+            _target = (TD_InfinityScroll_Test)target;
         }
 
         public override void OnInspectorGUI()
@@ -35,9 +35,19 @@ namespace TD
             GUILayout.Label("=======================================");
             GUILayout.Label(" [ Infinity Scroll Create 및 Setting ] ");
             GUILayout.Space(20);
-            if (GUILayout.Button(" Create (생성) ")) _target.OnClick_CreateInfinityScroll();
-            if (GUILayout.Button(" Reset (초기화) ")) _target.OnClick_CreateInfinityScroll();
+
+            if (GUILayout.Button(" Create ( 생성 ) ")) 
+                _target.OnClick_CreateInfinityScroll();
+            GUILayout.Space(20);
+            if (GUILayout.Button(" Reset ( 초기화 ) ")) 
+                _target.OnClick_ResetInfinityScroll();
         }
+
+
+
     }
+
+
+
 #endif
 }
