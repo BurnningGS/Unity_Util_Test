@@ -132,7 +132,7 @@ namespace TD
         [Header("  [ 4. Inner Data ]  ")]
         [Space(15)]
         /// <summary>
-        /// 
+        /// 아이템 리스트 입니다. 
         /// </summary>
         public LinkedList<RectTransform> ItemList = new LinkedList<RectTransform>();
 
@@ -141,6 +141,9 @@ namespace TD
         [Header("==============================")]
         [Header("  [ 5. Inner Event ]  ")]
         [Space(15)]
+        /// <summary>
+        /// 아이템 내부 이벤트 입니다.
+        /// </summary>
         public OnItemPositionChangeEvent onUpdateItemEvents = new OnItemPositionChangeEvent();
 
 
@@ -158,7 +161,7 @@ namespace TD
         private void _initialize_Scroll()
         {
             //-----------------------------------------------------------------------------------------------
-            // 0. Calculate
+            // 0. Calculate / 초기화
             //
             MaxItemCount = (int)(ST_ItemCount.x * ST_ItemCount.y);
             TotalItemCount = MaxItemCount + (int)(Extra_ItemCount.x * Extra_ItemCount.y);
@@ -175,7 +178,7 @@ namespace TD
             Target_ScrollRect.vertical = (StandardAxis == eIFS_ST_Axis.Vertical);
             Target_ScrollRect.content = Content;
 
-            ChildItemPrefab.gameObject.SetActive(false); // 생성 아이템 원본 꺼줌.
+            //ChildItemPrefab.gameObject.SetActive(false); // 생성 아이템 원본 꺼줌.
 
             // 아이템 생성.
 
@@ -189,10 +192,13 @@ namespace TD
                     rt.SetParent(Content, false); // 부모설정
                     rt.sizeDelta = CellSize; // 크기 지정
 
-                    // 아이템 위치 지정. 
-                    var pos = new Vector2(CellSize.x,CellSize.y);
-                    
+                    // 아이템 위치 지정.
+                    var pos = new Vector2(CellSize.x * X,CellSize.y * Y);
+                    rt.anchoredPosition = pos;
                     //rt.anchoredPosition = (StandardAxis == eIFS_ST_Axis.Vertical) ? new Vector2(0, -CellSize * i) : new Vector2(itemScale * i, 0);
+
+
+                    item.SetActive(true);
                 }
             }
 
@@ -217,6 +223,9 @@ namespace TD
 
         //============================================================================================
         // Editor
+        /// <summary>
+        /// 에디터 리셋버튼에 해당하는 함수 입니다.
+        /// </summary>
         public void Editor_ResetInfinityScroll()
         {
             if (gameObject.GetComponent<RectTransform>().childCount <= 0)
@@ -241,6 +250,9 @@ namespace TD
 
         }
 
+        /// <summary>
+        /// 에디터의 생성 버튼의 함수 입니다.
+        /// </summary>
         public void Editor_CreateInfinityScroll()
         {
             Target_BG = gameObject.GetComponent<RectTransform>();
@@ -300,9 +312,12 @@ namespace TD
             
         }
 
+        /// <summary>
+        /// 에디터의 셋팅 버튼의 함수 입니다.
+        /// </summary>
         public void Editor_SetInfinityScroll()
         {
-
+            _initialize_Scroll();
         }
     }
 }
